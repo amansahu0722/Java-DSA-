@@ -31,6 +31,14 @@ public class Preorder {
             preorder(root.left);
             preorder(root.right);
         }
+        public static void inorder(Node root){
+            if(root == null){
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data+" ");
+            inorder(root.right);
+        }
     }
 
 
@@ -41,7 +49,8 @@ public class Preorder {
         Binarytree tree = new Binarytree();
         Node root = tree.buildTree(nodes);
         //System.out.println(root.data);
-        tree.preorder(root);
+        //tree.preorder(root);
+        tree.inorder(root);
     }
 
 
